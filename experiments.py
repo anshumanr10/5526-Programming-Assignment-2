@@ -228,7 +228,7 @@ def run_experiment(model_name, n_features=40, hidden_size=128, layers=2, seq_len
         noise_val="SpeechCommands/noise",
         noise_test="SpeechCommands/noise",
         batch_size=64,
-        num_workers=8,
+        num_workers=2,
         seq_len=seq_len,
     )
 
