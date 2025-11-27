@@ -70,6 +70,9 @@ def train_model(model, train_dl, val_dl, epochs=20, lr=1e-3, patience=3):
     val_losses = []
     best_state = None
 
+    # NOTE: Added "non_blocking = True" in order to experiment with different methods of optimizing training times
+    #       It doesn't affect the results. Also modified num_workers to increase parallelism. Attempted to change
+    #       the code base back to original settings, but may have missed some comments here or there.
 
     for epoch in range(1, epochs + 1):
         # ---- Training ----
